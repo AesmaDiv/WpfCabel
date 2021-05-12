@@ -1,0 +1,28 @@
+﻿<Page x:Class="WPF_Try.HipotParamsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_Try"
+      mc:Ignorable="d"
+      Title="HipotParamsPage" RenderTransformOrigin="0,0">
+    <Page.RenderTransform>
+        <TransformGroup>
+            <ScaleTransform ScaleX="1.6" ScaleY="1.6"/>
+            <SkewTransform/>
+            <RotateTransform/>
+            <TranslateTransform/>
+        </TransformGroup>
+    </Page.RenderTransform>
+
+    <StackPanel Orientation="Horizontal" Margin="5">
+        <StackPanel Orientation="Vertical" Width="200">
+            <TextBlock Text="Напряжение испытания:"  FontSize="16" FontWeight="Bold" Foreground="White" HorizontalAlignment="Right" Height="25"/>
+            <TextBlock Text="Индекс поляризации:" FontSize="16" FontWeight="Bold" Foreground="White" HorizontalAlignment="Right" Height="25" Visibility="Hidden"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Margin="10,0,0,0">
+            <ComboBox x:Name="comboVoltage" Width="70" Height="25"/>
+            <CheckBox x:Name="checkPolar" VerticalAlignment="Bottom" Height="25" VerticalContentAlignment="Center" Visibility="Hidden"/>
+        </StackPanel>
+    </StackPanel>
+</Page>

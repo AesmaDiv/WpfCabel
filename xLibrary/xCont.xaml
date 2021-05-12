@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="xLibrary.xCont"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" x:Name="xExpander" Loaded="xExpander_Loaded"
+             d:DesignHeight="300" d:DesignWidth="300" MouseEnter="xExpander_MouseEnter" MouseLeave="xExpander_MouseLeave" SizeChanged="xExpander_SizeChanged">
+    <UserControl.Resources>
+        <ImageBrush x:Key="pin_red" ImageSource="Images\pin_red.png"/>
+        <ImageBrush x:Key="pin_green" ImageSource="Images\pin_green.png"/>
+    </UserControl.Resources>
+    <UserControl.Template>
+        <ControlTemplate>
+            <Grid x:Name="xLayoutRoot">
+                <Grid.RowDefinitions>
+                    <RowDefinition x:Name="HeaderGridRow" Height="20"/>
+                    <RowDefinition x:Name="ContentGridRow" Height="*"/>
+                </Grid.RowDefinitions>
+                <Border x:Name="HeaderStack" Grid.Row="0" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" MouseUp="Pin_MouseUp">
+                    <Border x:Name="Pin" Width="15" Height="15" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="2,0,2,0" MouseUp="Pin_MouseUp"
+                            Background="Transparent" BorderBrush="Black" BorderThickness="1" CornerRadius="15"/>
+                </Border>
+                <DockPanel x:Name="ContentStack" Grid.Row="1" Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}">
+                    <Label x:Name="Label" Height="25" HorizontalContentAlignment="Right" DockPanel.Dock="Right"
+                           Background="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" HorizontalAlignment="Right"
+                           Content="{Binding Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}, Path=Header}">
+                        <Label.LayoutTransform>
+                            <TransformGroup>
+                                <RotateTransform Angle="270"/>
+                            </TransformGroup>
+                        </Label.LayoutTransform>
+                    </Label>
+                    <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" DockPanel.Dock="Left"  
+                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                                      Content="{Binding Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}, Path=Content}"
+                                      />
+                </DockPanel>
+            </Grid>
+        </ControlTemplate>
+    </UserControl.Template>
+</UserControl>

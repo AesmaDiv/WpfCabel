@@ -1,0 +1,147 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_Try"
+      xmlns:xLibrary="clr-namespace:xLibrary;assembly=xLibrary" x:Class="WPF_Try.ProtocolPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="ProtocolPage" Width="21cm" Height="29cm" Foreground="Black">
+
+    <Canvas x:Name="cnvReport" Width="21cm" Height="29cm" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+        <!--логотип-->
+
+        <Image Source="Resources/Images/logo127.png" Canvas.Left="78" Canvas.Top="16" Height="62" Width="63" RenderTransformOrigin="1.013,0.307" Stretch="Fill" />
+
+        <!--шапка-->
+
+        <TextBlock Text="Общество с ограниченной ответственностью" Canvas.Left="10" Canvas.Top="16" Height="30" Width="774" FontFamily="Bookman Old Style" FontSize="18" FontWeight="Bold" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Background="Transparent"/>
+        <TextBlock x:Name="txtTitle" Text="«ЛУКОЙЛ ЭПУ Сервис», г.Когалым" Canvas.Left="10" Canvas.Top="38" Height="30" Width="774" FontFamily="Bookman Old Style" FontSize="18" FontWeight="Bold" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Background="Transparent"/>
+
+        <!--заголовок-->
+
+        <TextBlock Text="Протокол испытания кабельной линии." Canvas.Left="10" Canvas.Top="60" Height="38" Width="774" FontFamily="Calibri" FontSize="26" FontWeight="Bold" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Background="Transparent"/>
+
+        <!--описание-->
+
+        <StackPanel Orientation="Horizontal" Canvas.Left="32" Canvas.Top="95">
+            <StackPanel Orientation="Vertical" Width="120">
+                <TextBlock Foreground="Black" Text="Дата/Время:" FontFamily="Calibri" FontWeight="Bold"/>
+                <TextBlock Foreground="Black" Text="Наряд № / Заявка №:" FontFamily="Calibri" FontWeight="Bold"/>
+                <TextBlock Foreground="Black" Text="Заказчик:" FontFamily="Calibri" />
+                <TextBlock Foreground="Black" Text="Месторождение:" FontFamily="Calibri"/>
+                <TextBlock Foreground="Black" Text="Куст:" FontFamily="Calibri"/>
+                <TextBlock Foreground="Black" Text="Скважина:" FontFamily="Calibri"/>
+                <TextBlock Foreground="Black" Text="Суточный пробег:" FontFamily="Calibri" Margin="0,0,24,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Width="240">
+                <TextBlock x:Name="txtDateTime" FontFamily="Calibri" Foreground="Black" Text="-" FontWeight="Bold"/>
+                <TextBlock x:Name="txtOrder" FontFamily="Calibri" Foreground="Black" Text="-" FontWeight="Bold"/>
+                <TextBlock x:Name="txtCustomer" FontFamily="Calibri" Foreground="Black" Text="-"/>
+                <TextBlock x:Name="txtField" FontFamily="Calibri" Foreground="Black" Text="-" />
+                <TextBlock x:Name="txtLease" FontFamily="Calibri" Foreground="Black" Text="-"/>
+                <TextBlock x:Name="txtWell" FontFamily="Calibri" Foreground="Black" Text="-"/>
+                <TextBlock x:Name="txtDaysRun" FontFamily="Calibri" Foreground="Black" Text="-"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Width="120">
+                <TextBlock Foreground="Black" Text="Заводской номер:" FontFamily="Calibri" FontWeight="Bold"/>
+                <TextBlock Foreground="Black" Text="Изготовитель:" FontFamily="Calibri"/>
+                <TextBlock Foreground="Black" Text="Тип кабеля:" FontFamily="Calibri"/>
+                <TextBlock Foreground="Black" Text="Сортамент:" FontFamily="Calibri"/>
+                <TextBlock Foreground="Black" Text="Длина:" FontFamily="Calibri"/>
+                <TextBlock Foreground="Black" Text="Кабельная линия:" FontFamily="Calibri"/>
+                <TextBlock Foreground="Black" Text="Удлинитель Н/З №:" FontFamily="Calibri"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Width="240">
+                <TextBlock x:Name="txtSerial" Foreground="Black" Text="-" FontFamily="Calibri" FontWeight="Bold"/>
+                <TextBlock x:Name="txtProducer" Foreground="Black" Text="-" FontFamily="Calibri"/>
+                <TextBlock x:Name="txtCabelType" Foreground="Black" Text="-" FontFamily="Calibri"/>
+                <TextBlock x:Name="txtCabelSort" Foreground="Black" Text="-" FontFamily="Calibri"/>
+                <TextBlock x:Name="txtLength" Foreground="Black" Text="-" FontFamily="Calibri"/>
+                <TextBlock x:Name="txtLine" Foreground="Black" Text="-" FontFamily="Calibri"/>
+                <TextBlock x:Name="txtExtention" Foreground="Black" Text="-" FontFamily="Calibri"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!--высоковольтный тест-->
+
+        <StackPanel Orientation="Vertical" Canvas.Left="32" Canvas.Top="205">
+            <TextBlock Text="Результаты высоковольтного испытания:" FontFamily="Calibri" FontSize="15" FontWeight="Bold"/>
+            <Border BorderBrush="Black" BorderThickness="1">
+                <Grid>
+                    <TextBlock Text="I*, мкА" Margin="41,2,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Panel.ZIndex="2"/>
+                    <Image x:Name="imgChart" Width="724" Height="200" Source="Resources/Images/btn_no_bw.png" Panel.ZIndex="1" Grid.ColumnSpan="2"/>
+                    <TextBlock Text="Время, мин" HorizontalAlignment="Center" Margin="0,0,0,2" VerticalAlignment="Bottom" Panel.ZIndex="2"/>
+                </Grid>
+            </Border>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Canvas.Left="32" Canvas.Top="425">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Фаза А" FontFamily="Calibri" FontSize="15" FontWeight="Bold"/>
+                    <xLibrary:xCustomTable x:Name="tableHipotA" FontFamily="Calibri" FontSize="12" FontWeight="Normal" ColumnCount="4" RowCount="10" HasColumnHeader="True" HasRowHeader="True" HeaderColumnWidth="50" CellBackground="{x:Null}" HeaderBackground="{x:Null}" CellForeground="Black" IsCellsEditable="False" DataColumnWidth="65" ColumnWidthArray="50,50,60,60" RowHeight="18" HeaderForeground="Black"/>
+                    <StackPanel x:Name="stkPiA" Orientation="Horizontal">
+                        <TextBlock Text="Индекс поляризации:" FontWeight="Bold"/>
+                        <TextBlock x:Name="txtPiA" Text="-.---" Width="120" Margin="20,0,0,0" TextAlignment="Right"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="5,0,5,0">
+                    <TextBlock Text="Фаза B" FontFamily="Calibri" FontSize="15"  FontWeight="Bold"/>
+                    <xLibrary:xCustomTable x:Name="tableHipotB" FontFamily="Calibri" FontSize="12" FontWeight="Normal" ColumnCount="4" RowCount="10" HasColumnHeader="True" HasRowHeader="False" HeaderColumnWidth="25" CellBackground="{x:Null}" HeaderBackground="{x:Null}" CellForeground="Black" IsCellsEditable="False" DataColumnWidth="65" ColumnWidthArray="50,50,60,60" RowHeight="18" HeaderForeground="Black"/>
+                    <StackPanel x:Name="stkPiB" Orientation="Horizontal">
+                        <TextBlock x:Name="txtPiB" Text="-.---" Width="120" Margin="100,0,0,0" TextAlignment="Right"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Фаза C" FontFamily="Calibri" FontSize="15"  FontWeight="Bold" Width="216"/>
+                    <xLibrary:xCustomTable x:Name="tableHipotC" FontFamily="Calibri" FontSize="12" FontWeight="Normal" ColumnCount="4" RowCount="10" HasColumnHeader="True" HasRowHeader="False" HeaderColumnWidth="25" CellBackground="{x:Null}" HeaderBackground="{x:Null}" CellForeground="Black" IsCellsEditable="False" DataColumnWidth="65" ColumnWidthArray="50,50,60,60" RowHeight="18" HeaderForeground="Black"/>
+                    <StackPanel x:Name="stkPiC" Orientation="Horizontal">
+                        <TextBlock x:Name="txtPiC" Text="-.---" Width="120" Margin="100,0,0,0" TextAlignment="Right"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+           
+            <!--омическое сопротивление-->
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                    <TextBlock Text="Результаты измерения омического сопротивления:" FontFamily="Calibri" FontSize="15" FontWeight="Bold" Height="19" HorizontalAlignment="Left"/>
+                    <xLibrary:xCustomTable x:Name="tableROhm" ColumnCount="3" RowCount="4" IsCellsEditable="False" FontFamily="Calibri" FontSize="12" FontWeight="Normal" ColumnWidthArray="70,70,119" HeaderColumnWidth="80" DataColumnWidth="70" CellBackground="{x:Null}" CellForeground="Black" HeaderBackground="{x:Null}" HasColumnHeader="True" RowHeight="18" HasRowHeader="True" Height="92" HorizontalAlignment="Right" Width="341"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="10,0,0,0" >
+                    <TextBlock FontSize="11" Foreground="Black" Text="(*) - значения, пересчитанные на 1000 метров." FontWeight="Bold" FontStyle="Italic"/>
+                    <!--TextBlock FontSize="11" Foreground="Black" Text="(**) - ток заряда."/-->
+                </StackPanel>
+            </StackPanel>
+            <!--омическое сопротивление-->
+
+            <!--информация по структуре кабельной линии-->
+
+            <StackPanel x:Name="stkStructData" Orientation="Vertical">
+                <TextBlock Text="Информация по структуре кабельной линии:" FontFamily="Calibri" FontSize="15" FontWeight="Bold" TextAlignment="Left" HorizontalAlignment="Left"/>
+                <xLibrary:xCustomTable x:Name="tableStructureCabel" ColumnCount="7" RowCount="8" IsCellsEditable="False" FontFamily="Calibri" FontSize="12"
+                                       FontWeight="Normal" ColumnWidthArray="120,80,50,50,140,140,66" HeaderColumnWidth="80" DataColumnWidth="70"
+                                       CellBackground="{x:Null}" CellForeground="Black" HeaderBackground="{x:Null}" HasColumnHeader="True" RowHeight="18"
+                                       HasRowHeader="True" HorizontalAlignment="Left" HeaderRowsIndices="7"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Foreground="Black" Text="Примечание:" FontFamily="Calibri" FontSize="15" FontWeight="Bold"/>
+                <TextBox x:Name="txtComment" Width="634" Height="54" TextWrapping="Wrap" Margin="7,0,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Foreground="Black" Width="70" Text="Оператор:"/>
+                        <TextBlock Foreground="Black" Text="_____________________________ / ______________________"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="55,0,0,0">
+                        <TextBlock Width="70" Foreground="Black" Text="Мастер:"/>
+                        <TextBlock Foreground="Black" Text="_____________________________ / ______________________"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        
+    </Canvas>
+</Page>

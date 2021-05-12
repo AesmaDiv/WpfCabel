@@ -1,0 +1,21 @@
+﻿<UserControl x:Name="userControl" x:Class="xLibrary.xChartSpline"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:xLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" SizeChanged="xChartSpline_SizeChanged">
+    <Border x:Name="bdrBackground" Background="Black" BorderBrush="White" CornerRadius="5" BorderThickness="1" Padding="5">
+        <Grid>
+            <Image x:Name="img" Stretch="UniformToFill" Panel.ZIndex="1"/>
+            <Canvas x:Name="cnvChart" Background="Transparent" MouseMove="cnvChart_MouseMove" Panel.ZIndex="2">
+                <local:CrossMark x:Name="crossLift" Fill="Blue" Canvas.Top="0" Canvas.Left="0"/>
+                <local:CrossMark x:Name="crossPower" Fill="Red" Canvas.Top="0" Canvas.Right="0"/>
+                <local:CrossMark x:Name="crossEff" Fill="Green" Canvas.Bottom="0" Canvas.Left="0"/>
+                <Line x:Name="lineFixPoint" Stroke="Magenta" Width="Auto" X1="-5" X2="-5" Panel.ZIndex="3" Y1="{Binding ActualHeight, ElementName=cnvChart, Mode=OneWay}" StrokeThickness="3"/>
+            </Canvas>
+        </Grid>
+
+    </Border>
+</UserControl>

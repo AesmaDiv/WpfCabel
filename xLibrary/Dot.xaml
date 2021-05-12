@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="xLibrary.Dot"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Path x:Name="path" Fill="Red">
+        <Path.Data>
+            <EllipseGeometry x:Name="ellipseGeo" 
+                             RadiusX="3" 
+                             RadiusY="3"/>
+        </Path.Data>
+    </Path>
+</UserControl>

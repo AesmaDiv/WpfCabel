@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="xLibrary.xOnOff"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="300" Background="Transparent" MouseUp="UserControl_MouseUp">
+    <UserControl.Resources>
+        <ImageBrush x:Key="back" ImageSource="Images\switch_back.png"/>
+        <ImageBrush x:Key="swt" ImageSource="Images\switcher.png"/>
+        <DropShadowEffect x:Key="shadow" Direction="-50" Opacity="0.5" ShadowDepth="10"/>
+    </UserControl.Resources>
+    <Grid x:Name="grid" Background="Transparent">
+        <Border x:Name="back" Background="{StaticResource ResourceKey=back}">
+            <Border x:Name="swtch" Background="{StaticResource ResourceKey=swt}" Effect="{StaticResource ResourceKey=shadow}" RenderTransformOrigin="0,0.5" Width="{Binding ActualWidth, ElementName=back}" Loaded="swtch_Loaded"/>
+        </Border>
+    </Grid>
+</UserControl>

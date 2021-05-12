@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="xLibrary.xSwitchOnOff"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             d:DesignHeight="80" d:DesignWidth="140">
+    <Grid x:Name="xGrid" Background="Blue">
+        <StackPanel x:Name="stack" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
+        <Border x:Name="bdrBack" Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="5" Width="20" MouseDown="Switch_MouseDown" CornerRadius="10">
+            <Grid>
+                <StackPanel x:Name="stkBack" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                <Border x:Name="Switch" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="2" Height="16" MouseDown="Switch_MouseDown"  CornerRadius="8"/>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

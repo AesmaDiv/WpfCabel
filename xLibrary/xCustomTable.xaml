@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="xLibrary.xCustomTable"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <Border x:Name="bdrCustomTable" BorderBrush="Black" BorderThickness="1">
+        <StackPanel x:Name="stkMain" Orientation="Vertical" Panel.ZIndex="0"/>
+    </Border>
+    
+    <!--<Canvas >
+        <StackPanel x:Name="stkMain" Orientation="Vertical" Panel.ZIndex="0"/>
+        <Border Background="Blue" Panel.ZIndex="1" Width="50" Height="50" Canvas.Left="50" Canvas.Top="40"/>
+    </Canvas>-->
+
+</UserControl>

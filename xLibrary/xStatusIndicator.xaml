@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="xLibrary.xStatusIndicator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:xLibrary"
+             xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+             mc:Ignorable="d"
+             x:Name="Indicator" >
+    <UserControl.Resources>
+        <ImageBrush x:Key="status_on" ImageSource=".\Images\buttonOn_small.png"/>
+        <ImageBrush x:Key="status_off" ImageSource=".\Images\buttonOff_small.png"/>
+        <Style x:Key="xImageStyle" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value="{StaticResource status_off}"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Status, ElementName=Indicator}" Value="True">
+                    <Setter Property="Background" Value="{StaticResource status_on}"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Status, ElementName=Indicator}" Value="False">
+                    <Setter Property="Background" Value="{StaticResource status_off}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+    </UserControl.Resources>
+    <Border BorderThickness="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Padding="2">
+        <Grid x:Name="LayoutRoot">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="xText" Grid.Column="0" Foreground="Yellow" Content="Параметр:" VerticalAlignment="Center" Height="25"/>
+            <Border x:Name="xImage" Grid.Column="1" Width="20" Height="20" Style="{StaticResource xImageStyle}"/>
+        </Grid>
+    </Border>
+
+</UserControl>
+

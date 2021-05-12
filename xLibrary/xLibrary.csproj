@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7099EB6-DDEB-4D13-9BCF-32F1946E21AA}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>xLibrary</RootNamespace>
+    <AssemblyName>xLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ExpressionBlendVersion>5.2.30810.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="xAccess.cs" />
+    <Compile Include="xCustomTable.xaml.cs">
+      <DependentUpon>xCustomTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xMessageWindow.xaml.cs">
+      <DependentUpon>xMessageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xAdamTCP.cs" />
+    <Compile Include="xAxis.cs" />
+    <Compile Include="CardinalSplineShape.cs" />
+    <Compile Include="CrossMark.xaml.cs">
+      <DependentUpon>CrossMark.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dot.xaml.cs">
+      <DependentUpon>Dot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xAnalog.xaml.cs">
+      <DependentUpon>xAnalog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xChart.xaml.cs">
+      <DependentUpon>xChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xChartSpline.xaml.cs">
+      <DependentUpon>xChartSpline.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xClient.cs" />
+    <Compile Include="xCont.xaml.cs">
+      <DependentUpon>xCont.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xDataField.xaml.cs">
+      <DependentUpon>xDataField.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xFunctions.cs" />
+    <Compile Include="xOnOff.xaml.cs">
+      <DependentUpon>xOnOff.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xProgressBar.xaml.cs">
+      <DependentUpon>xProgressBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xRadioBtn.xaml.cs">
+      <DependentUpon>xRadioBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xSimpleChart.xaml.cs">
+      <DependentUpon>xSimpleChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xStatusIndicator.xaml.cs">
+      <DependentUpon>xStatusIndicator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xSwitch.xaml.cs">
+      <DependentUpon>xSwitch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xTab.xaml.cs">
+      <DependentUpon>xTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xTestButton.xaml.cs">
+      <DependentUpon>xTestButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xTestTable.xaml.cs">
+      <DependentUpon>xTestTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xTitle.xaml.cs">
+      <DependentUpon>xTitle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xTry.xaml.cs">
+      <DependentUpon>xTry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xTwoWaySwitch.xaml.cs">
+      <DependentUpon>xTwoWaySwitch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xValueTable.xaml.cs">
+      <DependentUpon>xValueTable.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CrossMark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dot.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="xCustomTable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="xMessageWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="xAnalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xChart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xChartSpline.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xCont.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xDataField.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xOnOff.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xRadioBtn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xSimpleChart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="xStatusIndicator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xSwitch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xTestList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="xTestList.xaml.cs">
+      <DependentUpon>xTestList.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="xTestButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="xTestTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xTitle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xTry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xTwoWaySwitch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="xValueTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\btnStop_idle.png" />
+    <Resource Include="Images\btnStop_over.png" />
+    <Resource Include="Images\btnStop_press.png" />
+    <Resource Include="Images\btnTest_idle.png" />
+    <Resource Include="Images\btnTest_over.png" />
+    <Resource Include="Images\btnTest_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\btnStop_disabled.png" />
+    <Resource Include="Images\btnTest_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\btnNewTest_idle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\btnNewTest_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\btnNewTest_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pin_green.png" />
+    <Resource Include="Images\pin_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LogoButton_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\btnNewTest_idle_gray.png" />
+    <Resource Include="Images\btnNewTest_over_gray.png" />
+    <Resource Include="Images\btnNewTest_press_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\switcher.png" />
+    <Resource Include="Images\switch_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\buttonOff.png" />
+    <Resource Include="Images\buttonOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\buttonOff_small.png" />
+    <Resource Include="Images\buttonOn_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\btn_no.png" />
+    <Resource Include="Images\btn_no_bw.png" />
+    <Resource Include="Images\btn_yes.png" />
+    <Resource Include="Images\btn_yes_bw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

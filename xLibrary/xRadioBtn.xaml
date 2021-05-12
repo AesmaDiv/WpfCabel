@@ -1,0 +1,24 @@
+﻿<UserControl x:Name="userControl" x:Class="xLibrary.xRadioBtn" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+             mc:Ignorable="d" 
+             d:DesignHeight="25" d:DesignWidth="150" MouseUp="userControl_MouseUp">
+    <UserControl.Resources>
+        <RadialGradientBrush x:Key="off" GradientOrigin="0.2,0.2">
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="#FF707070" Offset="0.01"/>
+        </RadialGradientBrush>
+        <RadialGradientBrush x:Key="on" GradientOrigin="0.2,0.2">
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="White" Offset="0.01"/>
+            <GradientStop Color="#FF5181FF" Offset="0.5"/>
+        </RadialGradientBrush>
+    </UserControl.Resources>
+    <DockPanel Margin="5,0,5,0">
+        <Border x:Name="btn" DockPanel.Dock="Left" Width="20" Height="{Binding Width, RelativeSource={RelativeSource Self}}" CornerRadius="{Binding Width, RelativeSource={RelativeSource Self}}" Background="{StaticResource off}" VerticalAlignment="Center"/>
+        <Label x:Name="header" Content="xRadioButton" VerticalContentAlignment="Center" Foreground="{Binding Foreground, ElementName=userControl}"/>
+    </DockPanel>
+</UserControl>
