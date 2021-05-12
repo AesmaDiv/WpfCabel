@@ -1,5 +1,5 @@
 Программное обеспечение стенда испытания погружного кабеля
-проект Visual Studio 2015 (Windows-WPF-C#)
+<br>проект Visual Studio 2015 (Windows-WPF-C#)
 <br>
 <br>WPF_Remake - папка проекта
 <br>xEquipment - классы для используемого оборудования
